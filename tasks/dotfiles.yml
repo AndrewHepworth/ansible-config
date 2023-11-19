@@ -1,0 +1,5 @@
+- name: install stow
+  apt: name=stow
+
+- name: clone / mv dotfiles
+  shell: mkdir ../.config && cp -R $HOME/.config ../.config
