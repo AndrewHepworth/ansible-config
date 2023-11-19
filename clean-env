@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+#Undo zsh
+uninstall_oh_my_zsh
+chsh /bin/bash
+sudo apt purge zsh
