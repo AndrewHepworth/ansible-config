@@ -107,3 +107,9 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 #Append this line to ~/.zshrc to enable fuzzy auto-completion for Zsh:
 
 source /usr/share/doc/fzf/examples/completion.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export TERM="xterm-256color"
