@@ -20,5 +20,9 @@
       - install
       - core
   tasks:
+    - include: tasks/ssh.yml
+    - include: tasks/git-setup.yml
+    - include: tasks/core-setup.yml
     - include: tasks/install-zsh.yml
+    - include: tasks/nvim-setup.yml
     - include: tasks/dotfiles.yml
