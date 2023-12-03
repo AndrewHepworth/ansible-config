@@ -4,11 +4,6 @@
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     personal: "{{ lookup('env', 'HOME') }}/personal"
   pre_tasks:
-  - name: Install sudo if not there
-    raw: |
-      test -e /usr/bin/sudo || apt install -y sudo
-    register: output
-    changed_when: output.stdout|trim() != ""
 
   - name: Update Apt
     become: true
