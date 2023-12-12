@@ -2,10 +2,10 @@
   become: true
   apt:
     name: ["build-essential", "cmake", "pkg-config", "libpthread-stubs0-dev"]
-    tags:
-      - install
-      - neovim
-      - core
+  tags:
+    - install
+    - neovim
+    - core
 
 - name: Install system package 2 ( lua, unzip, libtool, libtool-bin, gettext)
   become: true
@@ -19,7 +19,8 @@
 - name: Install system package 3 (the rest)
   become: true
   apt:
-    name: [ "compton", "curl", "htop", "golang", "lsof", "i3", "ccache", "ninja-build", "python3-pip", "dconf-editor", "nvidia-settings", "pavucontrol", "moreutils", "clangd", "ubuntu-mate-desktop" ]
+    # name: [ "compton", "curl", "htop", "golang", "lsof", "i3", "ccache", "ninja-build", "python3-pip", "dconf-editor", "nvidia-settings", "pavucontrol", "moreutils", "clangd", "ubuntu-mate-desktop" ]
+    name: [ "compton", "curl", "htop", "lsof", "i3", "ccache", "ninja-build", "python3-pip", "nvidia-settings", "pavucontrol", "moreutils", "clangd", "ubuntu-mate-desktop" ]
   tags:
     - install
     - core

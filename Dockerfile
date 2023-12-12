@@ -15,9 +15,10 @@ FROM base AS prime
 ARG TAGS
 RUN addgroup --gid 1000 andrew 
 RUN adduser --gecos andrew --uid 1000 --gid 1000 andrew
-RUN echo "andrew:hello" | sudo chpasswd
+#RUN echo "andrew:hello" | sudo chpasswd
 #RUN adduser --gecos andrew --uid 1000 --gid 1000 --disabled-password andrew
 RUN usermod -a -G sudo andrew
+RUN echo "andrew ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/andrew
 USER andrew
 WORKDIR /home/andrew
 
