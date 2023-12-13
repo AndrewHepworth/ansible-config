@@ -1,0 +1,1 @@
+ansible-playbook -t [tagname] init.yml  --ask-become-pass --ask-vault-pass
