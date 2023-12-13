@@ -1,9 +1,12 @@
 - hosts: localhost
   vars:
-    source_key: "./.ssh/id_rsa"
+    source_key: "./ssh/.ssh/github"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
     personal: "{{ lookup('env', 'HOME') }}/personal"
   pre_tasks:
+  - name: Set global SSH configuration file
+        set_fact:
+          ansible_ssh_common_args: "-F ./ssh/.ssh/config"
 
   - name: Update Apt
     become: true
