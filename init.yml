@@ -5,8 +5,8 @@
     personal: "{{ lookup('env', 'HOME') }}/personal"
   pre_tasks:
   - name: Set global SSH configuration file
-        set_fact:
-          ansible_ssh_common_args: "-F ./ssh/.ssh/config"
+    ansible.builtin.set_fact:
+      ansible_ssh_common_args: "-F ./ssh/.ssh/config"
 
   - name: Update Apt
     become: true
