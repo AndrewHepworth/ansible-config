@@ -20,7 +20,7 @@
   become: true
   apt:
     # name: [ "compton", "curl", "htop", "golang", "lsof", "i3", "ccache", "ninja-build", "python3-pip", "dconf-editor", "nvidia-settings", "pavucontrol", "moreutils", "clangd", "ubuntu-mate-desktop" ]
-    name: [ "compton", "curl", "htop", "lsof", "i3", "ccache", "ninja-build", "python3-pip", "nvidia-settings", "pavucontrol", "moreutils", "clangd", "ubuntu-mate-desktop" ]
+    name: [ "compton", "curl", "htop", "lsof", "i3", "ccache", "ninja-build", "python3-pip", "pavucontrol", "moreutils", "clangd" ]
   tags:
     - install
     - core
@@ -28,7 +28,7 @@
 - name: Install clang
   become: true
   apt:
-    name: [ "clang", "clang-11", "clang-12", "clangd", "clangd-10", "clangd-11", "clangd-12" ]
+    name: [ "clang", "clang-11", "clang-12", "clangd", "clangd-11", "clangd-12" ]
   tags:
     - install
     - neovim
